@@ -1,0 +1,102 @@
+<?php 
+    
+    if(!isset($_SESSION['admin_email'])){
+        
+        echo "<script>window.open('login.php','_self')</script>";
+        
+    }else{
+
+?>
+
+<div class="row"><!-- row 1 begin -->
+    <div class="col-lg-12"><!-- col-lg-12 begin -->
+        <ol class="breadcrumb"><!-- breadcrumb begin -->
+            <li>
+                
+                <i class="fa fa-dashboard"></i> Dashboard / View Results
+                
+            </li>
+        </ol><!-- breadcrumb finish -->
+    </div><!-- col-lg-12 finish -->
+</div><!-- row 1 finish -->
+
+<div class="row"><!-- row 2 begin -->
+    <div class="col-lg-12"><!-- col-lg-12 begin -->
+        <div class="panel panel-default"><!-- panel panel-default begin -->
+            <div class="panel-heading"><!-- panel-heading begin -->
+                <h3 class="panel-title"><!-- panel-title begin -->
+                
+                    <i class="fa fa-tags fa-fw"></i> View Results
+                
+                </h3><!-- panel-title finish -->
+            </div><!-- panel-heading finish -->
+            
+            <div class="panel-body"><!-- panel-body begin -->
+            
+                <?php 
+                
+                    $get_exams = "select * from exam";
+        
+                    $run_exams = mysqli_query($con,$get_exams);
+        
+                    while($row_exams=mysqli_fetch_array($run_exams)){
+                        
+                        $exam_id = $row_exams['exam_id'];
+                        
+                        $exam_title = $row_exams['exam_title'];
+
+                        $get_result="select COUNT(u_id) as nmbr from result where exam_id='$exam_id'";
+                        
+                        $run_result=mysqli_query($con,$get_result);
+
+                        if($row_result=mysqli_fetch_array($run_result)){
+
+                            $number_of_participants=$row_result['nmbr'];
+                        }
+                        
+                        
+                ?>
+                
+                <div class="col-lg-3 col-md-3"><!-- col-lg-3 col-md-3 begin -->
+                    <div class="panel panel-primary"><!-- panel panel-primary begin -->
+                        <div class="panel-heading"><!-- panel-heading begin -->
+                            <h2 class="panel-title" align="center"><!-- panel-title begin -->
+                            
+                                <?php echo $exam_title; ?>
+                                
+                            </h2><!-- panel-title finish -->
+                        </div><!-- panel-heading finish -->
+                        
+                        <div class="panel-body"><!-- panel-body begin -->
+                            
+                            <h4 class="text-center">Number Of Participants: <?php echo $number_of_participants;  ?></h4>
+                            
+                        </div><!-- panel-body finish -->
+                        
+                        <div class="panel-footer"><!-- panel-footer begin -->
+                            <center><!-- center begin -->
+                                
+                                <a href="index.php?view_individual_result=<?php echo $exam_id; ?>" class="w-100"><!-- pull-right begin -->
+                                
+                                 <i class="fa fa-fw fa-book"></i> View_results
+                                
+                                </a><!-- pull-right finish -->
+                        
+                                <div class="clearfix"></div>
+                                
+                            </center><!-- center finish -->
+                        </div><!-- panel-footer finish -->
+                        
+                    </div><!-- panel panel-primary finish -->
+                </div><!-- col-lg-3 col-md-3 finish -->
+                
+                <?php } ?>
+            
+            </div><!-- panel-body finish -->
+            
+        </div><!-- panel panel-default finish -->
+    </div><!-- col-lg-12 finish -->
+</div><!-- row 2 finish -->
+
+
+<?php } ?>

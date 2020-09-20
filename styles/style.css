@@ -1,0 +1,260 @@
+/*
+Auther:MD.REzowanur Rahman Robin
+Email:robincuetcse@gmail.com
+Phone:01795372964
+
+*/
+
+
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.colony-heading {
+    margin-left: 20%;
+    margin-top: 1%;
+    font-weight: 900;
+    padding: 10px;
+    opacity: 0.9;
+    font-family: 'Alfa Slab One';
+    letter-spacing: 4px;
+    color: #03002e;
+    font-size: 50px;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #65ff52, blue);
+    border: 5px solid black;
+    box-shadow: 5px 10px 10px #676967;
+    text-shadow: 5px 12px 11px #f5ce97;
+
+}
+
+.body-box {
+    margin-top: 1%;
+    padding-bottom: 30px;
+}
+
+.sin-reg>button {
+    margin-right: 10%;
+    width: 30%;
+}
+
+.sin-reg>button :hover {
+    color: #003664;
+    transform: 1s;
+}
+
+.sin-reg>a {
+    margin-right: 10%;
+    width: 30%;
+}
+
+.sin-reg>a :hover {
+    color: #003664;
+    transform: 1s;
+}
+
+
+
+
+
+.bg {
+    background-image: url("../images/p2.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.reg-box {
+    background-color: #00000070;
+    padding-right: 10px;
+    color: #fff;
+}
+
+.reg {
+    color: #001060;
+    font-size: 40px;
+    font-weight: 700;
+    /* color: #aa5151; */
+    background-color: #acc3cb;
+    border: 1px solid green;
+    /* padding: 4px; */
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-shadow: 2px 0px 12px #32d1db;
+    margin-right: 2%;
+
+}
+
+.Albert {
+    opacity: 0.9;
+}
+
+.quotes {
+    color: #ffffff;
+    width: 40%;
+    position: absolute;
+    bottom: 40%;
+    left: 55%;
+    z-index: 3;
+    font-size: 35px;
+    font-family: 'Parisienne', cursive;
+}
+
+
+
+@media(max-width: 991px) {
+    .signin {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        min-height: 44px;
+        font-size: 18px;
+    }
+
+    .reg-box {
+        background-color: #09020270;
+        margin: 20px;
+        margin-top: 15%;
+    }
+
+    .reg {
+        color: #001060;
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        /* color: #aa5151; */
+        background-color: #acc3cb;
+        border: 1px solid green;
+        /* padding: 4px; */
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-shadow: 2px 0px 12px #32d1db;
+        margin-right: 2%;
+
+    }
+
+    .colony-heading {
+        margin: 5%;
+        font-weight: 600;
+        padding: 10px;
+        opacity: 0.9;
+        font-family: 'Alfa Slab One';
+        letter-spacing: 2px;
+        color: #03002e;
+        font-size: 45px;
+        text-align: center;
+        border: 5px solid black;
+        background-color: #2a2b0d;
+        box-shadow: 5px 10px 10px #676967;
+        text-shadow: 5px 12px 11px #f5ce97;
+
+
+
+    }
+}
+
+@media(max-width: 1500px) {
+
+    .quotes {
+        font-size: 24px;
+        position: absolute;
+        bottom: 35%;
+    }
+}
+
+@media(max-width: 891px) {
+
+    .quotes {
+        font-size: 24px;
+        position: absolute;
+        bottom: 35%;
+    }
+}
+
+
+@media(max-width: 500px) {
+
+    .quotes {
+        font-size: 15px;
+
+    }
+
+    .colony-heading {
+
+        font-size: 30px;
+
+
+
+    }
+
+
+}
+@media(max-width: 391px) {
+
+    .quotes {
+        font-size: 13px;
+        position: absolute;
+        bottom: 25%;
+    }
+
+    .colony-heading {
+        margin: 5%;
+        font-weight: 500;
+        padding: 10px;
+        opacity: 0.9;
+        font-family: 'Alfa Slab One';
+        letter-spacing: 2px;
+        color: #03002e;
+        font-size: 20px;
+        text-align: center;
+        border: 5px solid black;
+        background-color: #2a2b0d;
+        box-shadow: 5px 10px 10px #676967;
+        text-shadow: 5px 12px 11px #f5ce97;
+
+
+
+    }
+
+    .sin-reg>button {
+        margin-right: 10px;
+        width: 40%;
+    }
+}
+
+@media(max-width: 200px) {
+
+    .quotes {
+        font-size: 8px;
+       
+    }
+
+    
+}
+
+
+
+
+
+
+/*footer style start*/
+.color-footer {
+
+    padding: 0.5%;
+    background-color: #220000;
+}
+
+.link {
+    margin-bottom: 2%;
+}
+
+.link>button {
+    margin: 0 auto;
+}
+
+/*index page styling end*/
